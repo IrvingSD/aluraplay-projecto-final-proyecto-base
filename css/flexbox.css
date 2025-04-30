@@ -12,6 +12,39 @@
     display: none;
 }
 
+/* Menu lateral/inferior */
+.menu__container{
+    position: fixed;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+}
+
+
+/* Lista botones menu */
+.menu__lista{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista li{
+    align-self: center;
+}
+
+/* Boton menú */
+.menu__itens{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display: none;
+}
+
 /* Seccion superior */
 .superior__seccion__container{
     display: flex;
@@ -35,4 +68,83 @@
     .rodapie__container{
         justify-content: space-between;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Menu lateral Tabletas */
+@media (min-width:834px){
+    /* Menú lateral/Inferior */
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+
+    /* Lista botones menu */
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
+}
+
+/* Menu lateral computadoras */
+@media (min-width:1400px){
+
+    /* Menú lateral/Inferior */
+    .menu__container {
+        width: 240px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+
+    /* Lista botones menu */
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 17px;
+        gap: 15px;
+
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .premium{
+        order:1;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .videojuegos{
+        order: 3;
+    }
+
+    /* Boton menú */
+    .menu__itens{
+        flex-direction: row;
+            gap: 17px;
+            align-items: center;
+    }
+
+
+    
 }
